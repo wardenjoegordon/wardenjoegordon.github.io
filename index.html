@@ -37,8 +37,6 @@
         ];
 
         var mapOptions = {
-          map.addListener('idle', function(e) {
-}
           zoom: 2,
           center: brooklyn,
           mapTypeControlOptions: {
@@ -49,7 +47,9 @@
 
         map = new google.maps.Map(document.getElementById('map_canvas'),
           mapOptions);
-
+        
+        map.addListener('idle', function(e) {
+}
         var styledMapOptions = {
           name: 'Custom Style'
         };
